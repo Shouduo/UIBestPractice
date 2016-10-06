@@ -27,8 +27,12 @@
 
         <Button
             android:id="@+id/send"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/send" />
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"
+            android:text="Send"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </LinearLayout>
