@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         msgList.add(msg1);
         Msg msg2 = new Msg("Excited. Who is that", Msg.TYPE_SENT, R.drawable.ha);
         msgList.add(msg2);
-        Msg msg3 = new Msg("This is wallace. Nice talking to you.", Msg.TYPE_RECEIVED, R.drawable.wallace);
+        Msg msg3 = new Msg("This is Wallace. Nice talking to you.", Msg.TYPE_RECEIVED, R.drawable.wallace);
         msgList.add(msg3);
         Msg msg4 = new Msg("          ;;;\n" +
                 "❐..❐- ∂  \n" +
