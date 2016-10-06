@@ -48,11 +48,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initMsg(){
-        Msg msg1 = new Msg("Hello guy.", Msg.TYPE_RECEIVED);
+        Msg msg1 = new Msg("Hello?", Msg.TYPE_RECEIVED);
         msgList.add(msg1);
-        Msg msg2 = new Msg("Hello. Who is that", Msg.TYPE_SENT);
+        Msg msg2 = new Msg("Excited. Who is that", Msg.TYPE_SENT);
         msgList.add(msg2);
-        Msg msg3 = new Msg("This is Tom. Nice talking to you.", Msg.TYPE_RECEIVED);
+        Msg msg3 = new Msg("This is Wallace. Nice talking to you.", Msg.TYPE_RECEIVED);
         msgList.add(msg3);
+        Msg msg4 = new Msg("          ;;;\n" +
+                "❐..❐- ∂  \n" +
+                "  '～' }  /\n" +
+                "   ︶ ", Msg.TYPE_SENT);
+        msgList.add(msg4);
     }
 }
