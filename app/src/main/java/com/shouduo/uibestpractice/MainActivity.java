@@ -42,12 +42,19 @@ public class MainActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                     msgListView.setSelection(msgList.size());
                     inputText.setText("");
+                    if ("苟利国家生死以".equals(content)) {
+                        Msg msgReply = new Msg("岂因祸福避趋之~", Msg.TYPE_RECEIVED, R.drawable.wallace);
+                        msgList.add(msgReply);
+                        adapter.notifyDataSetChanged();
+                        msgListView.setSelection(msgList.size());
+                    }
                 }
+
             }
         });
     }
 
-    private void initMsg(){
+    private void initMsg() {
         Msg msg1 = new Msg("Hello?", Msg.TYPE_RECEIVED, R.drawable.wallace);
         msgList.add(msg1);
         Msg msg2 = new Msg("Excited. Who is that", Msg.TYPE_SENT, R.drawable.ha);
