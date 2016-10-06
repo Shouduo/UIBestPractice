@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -33,6 +34,8 @@ public class MsgAdapter extends ArrayAdapter<Msg> {
             viewHolder.rightLayout = (LinearLayout) view.findViewById(R.id.right_layout);
             viewHolder.leftMsg = (TextView) view.findViewById(R.id.left_msg);
             viewHolder.rightMsg = (TextView) view.findViewById(R.id.right_msg);
+            viewHolder.leftPhoto = (ImageView) view.findViewById(R.id.left_photo);
+            viewHolder.rightPhoto = (ImageView) view.findViewById(R.id.right_photo);
             view.setTag(viewHolder);
         } else {
             view = convertView;
@@ -43,10 +46,12 @@ public class MsgAdapter extends ArrayAdapter<Msg> {
             viewHolder.leftLayout.setVisibility(View.VISIBLE);
             viewHolder.rightLayout.setVisibility(View.GONE);
             viewHolder.leftMsg.setText(msg.getContent());
+            viewHolder.leftPhoto.setImageResource(msg.getPhotoId());
         } else if (msg.getType() == Msg.TYPE_SENT) {
             viewHolder.rightLayout.setVisibility(View.VISIBLE);
             viewHolder.leftLayout.setVisibility(View.GONE);
             viewHolder.rightMsg.setText(msg.getContent());
+            viewHolder.rightPhoto.setImageResource(msg.getPhotoId());
         }
 
         return view;
@@ -58,5 +63,8 @@ public class MsgAdapter extends ArrayAdapter<Msg> {
 
         TextView leftMsg;
         TextView rightMsg;
+
+        ImageView leftPhoto;
+        ImageView rightPhoto;
     }
 }
