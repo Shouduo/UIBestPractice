@@ -10,10 +10,12 @@ public class Msg {
 
     private String content;
     private int type;
+    private int photoId;
 
-    public Msg(String content, int type) {
+    public Msg(String content, int type, int photoId) {
         this.content = content;
         this.type = type;
+        this.photoId = photoId;
     }
 
     public String getContent() {
@@ -22,5 +24,9 @@ public class Msg {
 
     public int getType() {
         return type;
+    }
+
+    public int getPhotoId() {
+        return photoId;
     }
 }

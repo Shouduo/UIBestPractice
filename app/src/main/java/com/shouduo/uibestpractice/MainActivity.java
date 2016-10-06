@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String content = inputText.getText().toString();
                 if (!"".equals(content)) {
-                    Msg msg = new Msg(content, Msg.TYPE_SENT);
+                    Msg msg = new Msg(content, Msg.TYPE_SENT, R.drawable.ha);
                     msgList.add(msg);
                     adapter.notifyDataSetChanged();
                     msgListView.setSelection(msgList.size());
@@ -48,11 +48,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initMsg(){
-        Msg msg1 = new Msg("Hello guy.", Msg.TYPE_RECEIVED);
+        Msg msg1 = new Msg("Hello?", Msg.TYPE_RECEIVED, R.drawable.wallace);
         msgList.add(msg1);
-        Msg msg2 = new Msg("Hello. Who is that", Msg.TYPE_SENT);
+        Msg msg2 = new Msg("Excited. Who is that", Msg.TYPE_SENT, R.drawable.ha);
         msgList.add(msg2);
-        Msg msg3 = new Msg("This is Tom. Nice talking to you.", Msg.TYPE_RECEIVED);
+        Msg msg3 = new Msg("This is wallace. Nice talking to you.", Msg.TYPE_RECEIVED, R.drawable.wallace);
         msgList.add(msg3);
+        Msg msg4 = new Msg("          ;;;\n" +
+                "❐..❐- ∂  \n" +
+                "  '～' }  /\n" +
+                "   ︶ ", Msg.TYPE_SENT, R.drawable.ha);
+        msgList.add(msg4);
     }
 }
